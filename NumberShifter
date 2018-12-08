@@ -1,7 +1,21 @@
+import java.util.Random;
 import java.util.Arrays;
 public class NumberShifter
 {  
   private int[] ray;
+  
+  public static int[] setRay()
+  {
+    Random rand = new Random();
+    int[] ray = new int[10];
+    
+    for(int k=0; k<ray.length; k++)
+    {
+      ray[k] = rand.nextInt(10)+1; 
+    }
+    return ray;
+  }
+  
   public static int[] shiftEm(int[] ray)
   {
     Arrays.sort(ray);
