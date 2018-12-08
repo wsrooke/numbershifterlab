@@ -1,0 +1,25 @@
+import java.util.Arrays;
+public class NumberShifter
+{  
+  private int[] ray;
+  public static int[] shiftEm(int[] ray)
+  {
+    Arrays.sort(ray);
+    int j = 0;
+    for(int i=0; i<ray.length; i++)
+    {
+      if (ray[i] == 7)
+      {
+	    int save = ray[j];
+        ray[j] = 7;
+        ray[i] = save;
+        j++;
+      }    
+    }
+    return ray;
+  }
+  public void printArray() 
+  {
+    System.out.println(ray);
+  }      
+}
